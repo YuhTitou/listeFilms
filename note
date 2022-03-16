@@ -1,0 +1,74 @@
+commande linux : chmod -R o-r "tous les fichiers presents dans le dossier WEB"
+
+Url : http://webetuinfo.iutlan.univ-rennes1.fr/hufichet/CodeIgniter/index.php
+
+Devant chaque commande git : git -c http.slavery = False
+
+codeigniter : https://codeigniter.com/userguide3/general/index.html
+
+projet avec codeigniter
+
+	---roles---
+
+visiteur, collectionneur, administrateur
+
+	---action---
+	
+visiteur:
+- voir page accueil
+- acceder a inscription -> authentification par un id et mdp (verif avec double saisie a l'inscription)
+- acceder a la connexion (partout et tout le temps)
+
+- voir liste films dispos (lien dans menu de navigation de l'app) 
+
+collectionneur(visiteur connecter):
+- acceder page accueil
+- acceder page perso -> ajout, suppr, affichage
+- acceder page deconnexion
+
+- ajouter film (collection limitée à 5) -> suppr auto de la collection du film le plus recent
+- supprimer de collection film -> bouton/lien (comme dans codeigniter) a chaque film
+doit garder l'ordre global + insertion d'un nouveau film  
+- lister films de sa collection
+
+
+admin
+- acceder page de connexion (id "admin",mdp "steven")
+- acceder page deconnexion
+- acceder page admin -> bannir
+
+- bannir(supprimer) un collectionneur -> supprimer aussi sa collection
+
+	---note--- 
+	
+- app web pour afficher (max 5 elem) contenu d'une collection (id, titre, date_sortie, description, affiche/image)
+
+- a l'affichage, films ordonnés selon date_sortie
+
+- gerer utilisateurs inscrits qui collectionnent certains films
+
+
+	---attribut---
+	
+collectionneur:
+- identifiant string
+- nom string
+- prenom string
+- mdp string
+
+
+
+film:
+- id string
+- titre string
+- date_sortie date
+- description string
+- affiche string
+
+
+
+
+
+
+créer des collectionneurs (meme maniere que les etudiants dans le tuto codeigniter)
+
